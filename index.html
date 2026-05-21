@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Meta Tags -->
+  <title>Arda Mavi</title>
+  <meta name="description" content="Composer" />
+  <meta name="author" content="Arda Mavi" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="TODO: https://www.siteniz.com" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Arda Mavi" />
+  <meta property="og:description" content="Composer" />
+  <meta property="og:url" content="TODO: https://ardamavi.com" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Arda Mavi",
+    "url": "https://www.ardamavi.com",
+    "sameAs": [
+      "https://ardamavi.music",
+      "https://medium.com/@ardamavi",
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { background: #000000; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to right, #1a3a7a, #7a1a1a);
+      color: #f0ece4;
+      padding: 2rem;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2.8rem;
+      text-align: center;
+      flex: 1;
+      justify-content: center;
+    }
+
+    h1 {
+      font-weight: 400;
+      font-size: clamp(1.4rem, 8vw, 4.2rem);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.1s forwards;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1.2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.35s forwards;
+    }
+
+    .btn {
+      min-width: 160px;
+      padding: 0.8rem 2.6rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #ebebeb;
+      border: 1px solid #ebebeb;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+
+    .btn::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .btn span { position: relative; z-index: 1; }
+
+    .btn:hover { border-color: transparent; }
+    .btn:hover::after { opacity: 1; }
+
+    .btn--portfolio::after { background: #1a3a7a; }
+    .btn--blog::after { background: #7a1a1a; }
+
+    footer {
+      padding: 1.2rem;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      color: #999999;
+      text-transform: uppercase;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .buttons { flex-direction: column; width: 100%; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main role="main">
+    <h1>Arda Mavi</h1>
+
+    <nav class="buttons" aria-label="Ana navigasyon">
+      <a class="btn btn--portfolio" href="https://ardamavi.music">
+        <span>Portfolio</span>
+      </a>
+      <a class="btn btn--blog" href="https://medium.com/@ardamavi">
+        <span>Blog</span>
+      </a>
+    </nav>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Arda Mavi. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
