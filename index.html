@@ -10,7 +10,7 @@
   <meta name="description" content="Composer" />
   <meta name="author" content="Arda Mavi" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.siteniz.com" />
+  <link rel="canonical" href="https://www.ardamavi.com" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -85,6 +85,13 @@
       animation: fadeUp 0.8s 0.25s forwards;
     }
 
+    .buttons-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
     .buttons {
       display: flex;
       gap: 1.2rem;
@@ -93,8 +100,9 @@
     }
 
     .btn {
-      min-width: 160px;
-      padding: 0.8rem 2.6rem;
+      width: 200px;
+      text-align: center;
+      padding: 0.8rem 0;
       font-size: 0.9rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
@@ -112,15 +120,13 @@
       inset: 0;
       opacity: 0;
       transition: opacity 0.3s;
+      background: #1a1a2e;
     }
 
     .btn span { position: relative; z-index: 1; }
 
     .btn:hover { border-color: transparent; }
     .btn:hover::after { opacity: 1; }
-
-    .btn--portfolio::after { background: #1a3a7a; }
-    .btn--blog::after { background: #7a1a1a; }
 
     footer {
       padding: 1.2rem;
@@ -138,6 +144,8 @@
 
     @media (max-width: 480px) {
       .buttons { flex-direction: column; width: 100%; }
+      .buttons-wrapper { width: 100%; }
+      .buttons-wrapper .btn { width: 100%; }
     }
   </style>
 </head>
@@ -148,20 +156,32 @@
     <h1>Arda Mavi</h1>
 
     <p class="tagline">Composer Candidate</p>
-    
-    <nav class="buttons" aria-label="Ana navigasyon">
-      <a class="btn btn--portfolio" href="https://ardamavi.music">
-        <span>Portfolio</span>
-      </a>
-      <a class="btn btn--blog" href="https://medium.com/@ardamavi">
-        <span>Blog</span>
-      </a>
-    </nav>
+
+    <div class="buttons-wrapper">
+      <nav class="buttons" aria-label="Ana navigasyon">
+        <a class="btn" href="https://ardamavi.music">
+          <span>Portfolio</span>
+        </a>
+        <a class="btn" href="https://medium.com/@ardamavi">
+          <span>Blog</span>
+        </a>
+      </nav>
+      <nav class="buttons" aria-label="Contact">
+        <a class="btn" href="mailto:mail@ardamavi.com">
+          <span>Contact</span>
+        </a>
+      </nav>
+    </div>
+
   </main>
 
   <footer>
-    <p>&copy; 2026 Arda Mavi. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Arda Mavi. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 
