@@ -58,7 +58,7 @@
       animation: fadeUp 0.8s 0.05s forwards;
     }
 
-    h1 {
+    .subtitle {
       font-weight: 300;
       font-size: clamp(0.75rem, 3vw, 1rem);
       letter-spacing: 0.3em;
@@ -69,28 +69,11 @@
       animation: fadeUp 0.8s 0.2s forwards;
     }
 
-    .divider {
-      width: 40px;
-      height: 1px;
-      background: rgba(240, 236, 228, 0.25);
-      opacity: 0;
-      animation: fadeUp 0.8s 0.3s forwards;
-    }
-
-    .message {
-      font-size: 0.9rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(241, 241, 241, 0.45);
-      opacity: 0;
-      animation: fadeUp 0.8s 0.4s forwards;
-    }
-
     .btn {
-      margin-top: 0.5rem;
-      min-width: 160px;
+      width: 260px;
+      text-align: center;
       padding: 0.8rem 2.6rem;
-      font-size: 0.7rem;
+      font-size: 0.9rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
       text-decoration: none;
@@ -107,7 +90,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: #1a3a7a;
+      background: #1a1a2e;
       opacity: 0;
       transition: opacity 0.3s;
     }
@@ -152,17 +135,19 @@
 
   <main role="main">
     <p class="code">404</p>
-    <h1>This blog is no longer active</h1>
-    <div class="divider"></div>
-    <p class="message">Visit my new website:</p>
+    <p class="subtitle">Page not found</p>
     <a class="btn" href="https://ardamavi.com">
       <span>Go to Homepage</span>
     </a>
   </main>
 
   <footer>
-    <p>&copy; 2026 Arda Mavi. All rights reserved.</p>
+    <p>&copy; <span id="year"></span> Arda Mavi. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 
